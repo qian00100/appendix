@@ -68,3 +68,17 @@ qqplot(BAWE_ICE_HK_clean$BAWE_Percent,\
        main = "QQ Plot of BAWE vs ICE-HK",\
        col = "darkgreen", pch = 19)\
 abline(0, 1, col = "red", lty = 2) }
+
+BAWE_freq <- Combined_wide$BAWE
+ICEHK_freq <- Combined_wide$`ICE-HK`
+
+
+shapiro.test(BAWE_freq[1:5000])  
+shapiro.test(ICEHK_freq[1:5000])
+
+
+qqnorm(BAWE_freq[1:5000]); qqline(BAWE_freq[1:5000], col="red")
+qqnorm(ICEHK_freq[1:5000]); qqline(ICEHK_freq[1:5000], col="red")
+
+BAWE_freq <- Combined_wide$BAWE
+ICEHK_freq <- Combined_wide$`ICE-HK`
